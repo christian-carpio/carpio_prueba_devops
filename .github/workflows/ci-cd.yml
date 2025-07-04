@@ -146,3 +146,9 @@ jobs:
       - name: Scan Docker image with Trivy
         run: |
           trivy image ${{ secrets.DOCKERHUB_USERNAME }}/devsu-demo-devops-java:latest
+      
+      - name: Upload Trivy report
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-report-${{ github.sha }}
+        
