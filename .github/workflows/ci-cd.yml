@@ -145,4 +145,4 @@ jobs:
 
       - name: Scan Docker image with Trivy
         run: |
-          trivy image ${{ secrets.DOCKER_USERNAME }}/devsu-demo-devops-java:latest
+          trivy image ${{ secrets.DOCKERHUB_USERNAME }}/devsu-demo-devops-java:latest
