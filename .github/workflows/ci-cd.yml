@@ -37,7 +37,7 @@ jobs:
       - name: Upload built JAR
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.event_name.repository.name }}-${{ github.sha }}
+          name: ${{ github.event.repository.name }}-${{ github.sha }}
           path: target/*.jar
 
   test:
