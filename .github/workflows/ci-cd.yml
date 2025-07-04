@@ -118,7 +118,7 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          docker build \ 
+          docker build \
           -t ${{ secrets.DOCKERHUB_USERNAME }}/devsu-demo-devops-java:${{ github.sha }} \
           -t ${{ secrets.DOCKERHUB_USERNAME }}/devsu-demo-devops-java:latest \
           .
