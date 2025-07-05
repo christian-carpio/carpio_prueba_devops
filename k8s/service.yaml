@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devsu-demo-devops-service
+spec:
+  type: ClusterIP
+  selector:
+    app: devsu-demo-devops
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
