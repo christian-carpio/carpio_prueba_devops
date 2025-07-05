@@ -193,3 +193,11 @@ jobs:
           kubectl apply -f k8s/deployment.yaml
           kubectl apply -f k8s/service.yaml
           kubectl apply -f k8s/ingress.yaml
+
+      - name: Rollout deployment
+        run: |
+          kubectl rollout restart deployment/devsu-demo-devops
+
+      - name: Wait for rollout to complete
+        run: |
+          kubectl rollout status deployment/devsu-demo-devops --timeout=300s
