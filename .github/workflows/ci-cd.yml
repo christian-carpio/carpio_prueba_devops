@@ -184,15 +184,11 @@ jobs:
           sed -i "s|__IMAGE_TAG__|${{ github.sha }}|g" k8s/deployment.yaml
       - name: Validate Kubernetes manifests
         run: |
-          kubectl apply --dry-run=client -f k8s/deployment.yaml
-          kubectl apply --dry-run=client -f k8s/service.yaml
-          kubectl apply --dry-run=client -f k8s/ingress.yaml
+          kubectl apply --dry-run=client -f k8s/
 
       - name: Deploy Kubernetes manifests
         run: |
-          kubectl apply -f k8s/deployment.yaml
-          kubectl apply -f k8s/service.yaml
-          kubectl apply -f k8s/ingress.yaml
+          kubectl apply -f k8s/
 
       - name: Rollout deployment
         run: |
