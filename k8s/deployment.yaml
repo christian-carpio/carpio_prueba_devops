@@ -14,13 +14,13 @@ spec:
     spec:
       containers:
       - name: devsu-demo-devops
-        image: christiancarpio2210/devsu-demo-devops-java:latest
+        image: christiancarpio2210/devsu-demo-devops-java:__IMAGE_TAG__
         ports:
         - containerPort: 8000
         resources:
           requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
             memory: "256Mi"
             cpu: "250m"
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
