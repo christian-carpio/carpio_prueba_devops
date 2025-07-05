@@ -3,10 +3,9 @@ kind: Ingress
 metadata:
   name: devsu-demo-devops-ingress
   annotations:
-    ngixx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: "gce"
 spec:
   rules:
-  - host: devops.local
     - http:
         paths:
           - path: /api
