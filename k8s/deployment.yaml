@@ -25,15 +25,4 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "250m"
-        readinessProbe:
-          httpGet:
-            path: /api/users
-            port: 8000
-          initialDelaySeconds: 40
-          periodSeconds: 5
-        livenessProbe:
-          httpGet:
-            path: /api/users
-            port: 8000
-          initialDelaySeconds: 60
-          periodSeconds: 10
+       
