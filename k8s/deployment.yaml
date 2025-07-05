@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: devsu-demo-devops
-        image: gcr.io/devsu-demo-devops/devsu-demo-devops:latest
+        image: christiancarpio2210/devsu-demo-devops-java:latest
         ports:
         - containerPort: 8000
         resources:

@@ -151,7 +151,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: trivy-report-${{ github.sha }}
-          path: trivy-report.txt
+          path: trivy-report.json
   
   deploy-to-gke:
     name: Deploy to GKE
