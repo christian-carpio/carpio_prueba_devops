@@ -15,6 +15,7 @@ spec:
       containers:
       - name: devsu-demo-devops
         image: christiancarpio2210/devsu-demo-devops-java:__IMAGE_TAG__
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000
         resources:
