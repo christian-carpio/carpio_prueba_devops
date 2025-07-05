@@ -181,7 +181,7 @@ jobs:
        
       - name: Set Image Tag
         run: |
-          sed -i '' "s|__IMAGE_TAG__|${{ github.sha }}|g" k8s/deployment.yaml
+          sed -i "s|__IMAGE_TAG__|${{ github.sha }}|g" k8s/deployment.yaml
       - name: Validate Kubernetes manifests
         run: |
           kubectl apply --dry-run=client -f k8s/deployment.yaml
